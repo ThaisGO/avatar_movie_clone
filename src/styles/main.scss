@@ -1,5 +1,7 @@
 @use 'variables';
 @use 'header';
+@use 'cta-banner';
+@use 'navbar';
 
 @font-face {
     font-family: Netflix Sans;
@@ -37,12 +39,49 @@ a {
     text-decoration: none;
 }
 
-$titleCount: 16;
-@while $titleCount <= 31 {
-    .text-#{$titleCount} {
-        font-size: #{$titleCount}px;
+.button {
+    background-color: variables.$colorButton;
+    border: none;
+    border-radius: 3px;
+    font-size: 13px;
+    line-height: 15px;
+    padding: 9px 20px;
+    color: variables.$colorPrimary;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.button_link {
+    border: 1px solid #888;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 13px;
+    padding: 9px 20px;
+}
+
+.textPrimary {
+    color: variables.$colorPrimary;
+}
+
+.textSecondary {
+    color: variables.$colorPrimary;
+}
+
+.textThird {
+    color: variables.$colorSecondary;
+}
+
+.textFooter {
+    color: variables.$colorThird;
+}
+
+$textCount: 12;
+@while $textCount <= 31 {
+    .text-#{$textCount} {
+        font-size: #{$textCount}px;
     }
-    $titleCount: $titleCount + 2;
+    $textCount: $textCount + 2;
 }
 
 $weightCount: 300;

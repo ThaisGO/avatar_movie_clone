@@ -3,8 +3,8 @@
 .header {
     max-width: 1600px;
     width: 100%;
-    // padding: 25px 5vw;
     position: relative;
+    z-index: -1;
 
     &_info {
         position: absolute;
