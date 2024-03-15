@@ -1,0 +1,64 @@
+@use 'variables';
+
+.header {
+    max-width: 1600px;
+    width: 100%;
+    // padding: 25px 5vw;
+    position: relative;
+
+    &_info {
+        position: absolute;
+        max-width: 800px;
+        min-width: 500px;
+        width: 60%;
+        height: 100%;
+        z-index: 1;
+        padding: 16px 5vw 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        &::after {
+            content: "";
+            background: variables.$gradiend;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: -200px;
+            top: 0;
+            z-index: -1;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h2 {
+            color: #fff;
+            margin-top: 60px;
+            margin-bottom: 24px;
+        }
+
+        span {
+            color: variables.$colorThird;
+            
+            .border {
+                border: 1px solid variables.$colorThird;
+                padding: 2px;
+            }
+        }
+        
+        p {
+            color: variables.$colorPrimary;
+            margin-top: 16px;
+            line-height: 22px
+        }
+    }
+
+    &_banner {
+        img {
+            
+            width: 100%;
+        }
+    }
+}

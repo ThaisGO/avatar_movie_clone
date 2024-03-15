@@ -1,7 +1,56 @@
-body {
-    background-color: red;
+@use 'variables';
+@use 'header';
+
+@font-face {
+    font-family: Netflix Sans;
+    src: url(../../assets/fonts/netflixsans-regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Netflix Sans;
+    src: url(../../assets/fonts/netflixsans-medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: Netflix Sans;
+    src: url(../../assets/fonts/netflixsans-light.ttf);
+    font-weight: 300;
 }
 
-h1 {
-    font-size: 40px;
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Netflix Sans;
 }
+
+body{
+    list-style-type: none;
+    list-style: none;
+    background-color: variables.$bgColorSite;
+}
+
+a {
+    text-decoration: none;
+}
+
+$titleCount: 16;
+@while $titleCount <= 31 {
+    .text-#{$titleCount} {
+        font-size: #{$titleCount}px;
+    }
+    $titleCount: $titleCount + 2;
+}
+
+$weightCount: 300;
+@while $weightCount <= 501 {
+    .weight-#{$weightCount} {
+        font-weight: #{$weightCount};
+    }
+    $weightCount: $weightCount + 100;
+}
+
+
