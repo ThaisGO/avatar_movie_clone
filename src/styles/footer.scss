@@ -1,0 +1,26 @@
+.footer {
+    padding: 8px 24px;
+    width: 90%;
+
+    h4 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    &_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        &--item {
+            padding: 8px 0;
+            a {
+                color: rgb(163, 163, 163);
+                font-size: 12px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    div:last-child {
+        margin: 30px 0;
+    }
+}
