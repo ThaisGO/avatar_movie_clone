@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" href="./dist/css/main.css">
     <title>Avatar Clone</title>
 </head>
@@ -55,6 +57,30 @@
 
     <section class="videos">
         <h2 class="text-30 weight-400">Vídeos |  <span class="text-20 weight-300 textThird">Avatar: O Último Mestre do Ar</span></h2>
+
+        <!-- Slider main container -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="./dist/images/videos/video_1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./dist/images/videos/video_2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./dist/images/videos/video_3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./dist/images/videos/video_4.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </section>
     
     <section class="episodes">
@@ -211,6 +237,7 @@
         <div class="text-14 weight-300 textThird">Netflix Brasil</div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="dist/js/script.js"></script>
 </body>
 </html>
