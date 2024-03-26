@@ -1,4 +1,7 @@
 .navbar {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
     background-color: #000;
     padding: 12px 30px;
     display: flex;
@@ -7,6 +10,21 @@
 
     &_logo {
         img {height: 30px;}
+        @media (max-width: 599px) {
+            display: none;
+        }
+
+        &--small {
+            display: none;
+            
+            @media (max-width: 599px) {
+                display: block;
+            }
+
+            img {
+                height: 38px;
+            }
+        }
     }
     
     &_links {
@@ -17,5 +35,12 @@
         button {
             margin: 0 8px;
         }
+
+        @media (max-width: 768px) {
+            p:first-child {
+                display: none;
+            }
+        }
+        
     }
 }
